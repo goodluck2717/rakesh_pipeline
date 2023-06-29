@@ -28,6 +28,12 @@ pipeline {
             }
         }
 
+         stage('validate') {
+            steps {
+                sh 'terraform validate'
+            }
+        }
+
     }
 
   }
