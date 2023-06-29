@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("/home/ec2-user/rakesh_pipeline/rakesh")
+    private_key = file("./rakesh")
     host        = self.public_ip
   }
 
