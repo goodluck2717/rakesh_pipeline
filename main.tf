@@ -9,7 +9,7 @@ resource "aws_key_pair" "rakesh" {
 
 resource "aws_instance" "web" {
   ami                    = "ami-057752b3f1d6c4d6c"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   subnet_id              = "subnet-0e3e677c606646bd7"
   key_name               = "rakesh"
   vpc_security_group_ids = ["sg-07b2f51f43c970c5e"]
