@@ -18,16 +18,16 @@ pipeline {
         stage('Plan') {
             steps {
                 sh 'terraform init'
-                sh "terraform fmt"
             }
         }
 
 
-      //  stage('Apply') {
-        //    steps {
-          //      sh "terraform apply -auto-approve"
-           // }
-       // }
+        stage('Apply') {
+            steps {
+                sh "terraform fmt"
+               // sh "terraform apply -auto-approve"
+         }
+        }
     }
 
   }
