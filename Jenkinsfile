@@ -46,6 +46,13 @@ pipeline {
             }
         }    
 
+        
+        stage('destroy') {
+            steps {
+                sh 'terraform destroy -auto-approve'
+            }
+        }  
+
     }
 
   }
