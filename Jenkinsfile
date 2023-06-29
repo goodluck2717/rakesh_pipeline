@@ -21,6 +21,13 @@ pipeline {
             }
         }
 
+        
+        stage('fmt') {
+            steps {
+                sh 'terraform fmt'
+            }
+        }
+
     }
 
   }
