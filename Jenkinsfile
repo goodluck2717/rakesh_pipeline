@@ -28,10 +28,23 @@ pipeline {
          }
         }
 
-                stage('validate') {
+        stage('validate') {
             steps {
                 sh "terraform validate"
+         }
+        }
+
+        
+        stage('plan') {
+            steps {
                 sh "terraform plan -lock=false"
+         }
+        }
+
+        
+        stage('apply') {
+            steps {
+                sh "terraform apply -auto-approve -lock=false"
          }
         }
     }
