@@ -34,6 +34,12 @@ pipeline {
             }
         }
 
+        stage('plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+
     }
 
   }
