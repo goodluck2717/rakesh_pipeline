@@ -22,9 +22,15 @@ pipeline {
         }
 
 
-        stage('Apply') {
+        stage('fmt') {
             steps {
                 sh "terraform fmt"
+         }
+        }
+
+                stage('validate') {
+            steps {
+                sh "terraform validate"
                // sh "terraform apply -auto-approve"
          }
         }
