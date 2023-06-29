@@ -40,6 +40,12 @@ pipeline {
             }
         }
 
+        stage('apply') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }    
+
     }
 
   }
