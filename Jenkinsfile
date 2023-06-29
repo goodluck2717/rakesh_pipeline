@@ -31,7 +31,7 @@ pipeline {
                 stage('validate') {
             steps {
                 sh "terraform validate"
-               // sh "terraform apply -auto-approve"
+                sh "terraform plan -lock=false"
          }
         }
     }
